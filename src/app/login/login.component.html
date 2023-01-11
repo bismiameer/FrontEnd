@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="main">      
+
+        <input type="checkbox" id="chk" aria-hidden="true">
+            <div class="signup">
+
+                <form [formGroup]="LoginForm">
+
+                    <label for="chk" aria-hidden="true">Sign In</label>
+
+                    <input type="text" formControlName="UserName" name="UserName" placeholder="UserName">
+
+                    <div class="err" *ngIf="submitted && f['UserName'].errors">
+
+                        <div *ngIf="f['UserName'].errors['required']">UserName is required</div>
+
+                    </div>
+
+                    <input type="Password" formControlName="Password" name="Password" placeholder="Password">
+
+                    <div class="err" *ngIf="submitted && f['Password'].errors">
+
+                        <div *ngIf="f['Password'].errors['required']">Password is required</div>
+
+                    </div>
+
+                    <button [disabled]="LoginForm.invalid" (click)="loginSubmitted()" type="submit">Login</button>
+
+                </form>
+
+            </div>       
+
+    </div>
+
+</body>
+
+</html>

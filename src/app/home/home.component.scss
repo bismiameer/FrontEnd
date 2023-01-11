@@ -1,0 +1,197 @@
+body {
+    overflow: scroll;
+    margin: 0;
+    font-family: 'Product Sans', sans-serif;
+    background-color: rgb(32, 33, 36);
+    color:cornflowerblue;
+  }
+  
+  
+  
+  .top a {
+    text-decoration: none;
+    color:cornflowerblue;
+  }
+  
+  .logo:hover {
+    outline: 3px solid rgb(60, 60, 52);
+    text-decoration: none;
+  }
+  
+  .top-link:hover {
+    text-decoration: underline;
+  }
+  
+  
+  .top {
+    font-weight: lighter;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 15px;
+    gap: 20px;
+  }
+  
+  .dots {
+    margin-left: 10px;
+    height: 40px;
+    width: 40px;
+  }
+  
+  #app-launch-icon {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  
+  .dots:hover {
+    background-color: rgb(50, 50, 50);
+    border-radius: 20px;
+  }
+  
+  .top p{
+    font-size: 12px;
+  }
+  
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(0, 151, 167);
+    border-radius: 15px;
+  }
+  
+  .logo p {
+    font-size: 18px;
+  }
+  
+  .main-image {
+    display: flex;
+    margin-top: 90px;
+    justify-content: center;
+  }
+  
+  .search-bar {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+  }
+  
+  #search-bar {
+    width: 540px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(32, 33, 36);
+    border: 1px solid rgb(75, 80, 80);
+    color: white;
+    text-indent: 40px;
+  }
+  
+  #search-bar:hover {
+    background-color: rgb(48, 49, 52);
+    border: 1px solid rgb(48, 49, 52);
+  }
+  
+  #search-bar:focus {
+    outline: none;
+  }
+  
+  .fa-solid {
+    position: absolute;
+    margin: 13px 0 0 17px;
+    color: rgb(154, 160, 166);
+  }
+  
+  #photo {
+    position: absolute;
+    margin-left: 505px;
+    margin-top: 10px;
+  }
+  
+  .two-btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 10px;
+  }
+  
+  .btn {
+    border-radius: 3px;
+    color: white;
+    background-color: rgb(48, 49, 52);
+    border: 1px solid rgb(48, 49, 52);
+    width: 120px;
+    height: 35px;
+  }
+  
+  .btn:hover {
+    border: 1px solid grey;
+  }
+  
+  .offer {
+    text-align: center;
+    color: grey;
+    font-size: 12px;
+    margin: 30px;
+  }
+  .offer a {
+    color: #5ea3f8;
+    margin-left: 5px;
+    text-decoration: none;
+  }
+  .offer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footers {
+    font-size: 16px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(23, 23, 23);
+    height: 50px;
+    color: gray;
+  }
+  
+  .footer-item p {
+    margin-left: 20px;
+    margin-top: 15px;
+  }
+  
+  #last {
+    border-top: 1px solid rgb(75, 80, 80);
+  }
+  
+  
+  .left {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    position: absolute;
+    justify-content: flex-start;
+  }
+  
+  .right {
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 50%;
+    right: 0;
+    margin-right: 20px;
+  }
+  
+  .links {
+    text-decoration: none;
+    color: gray;
+  }
+  
+  .links:hover {
+    text-decoration: underline;
+  }
