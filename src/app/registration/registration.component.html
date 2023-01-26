@@ -1,107 +1,185 @@
-
-<section class="vh-100 gradient-custom" style="background-color: royalblue;">
+  <section class="register-container">
     <div class="container py-5 h-100">
       <div class="row justify-content-center align-items-center h-100">
         <div class="col-12 col-lg-9 col-xl-7">
-          <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+          <div class="register-card card shadow-2-strong card-registration">
             <div class="card-body p-4 p-md-5">
-              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Register Here</h3>
+              <h3 class="mb-4 pb-md-0"> Register Here</h3>
+  
               <form [formGroup]="RegistrationFormGroup">
-  
                 <div class="row">
-                  <div class="col-md-6 mb-4">
-  
+                  <div class="col-md-6 mb-4 pb-2">
                     <div class="form-outline">
-                      <input type="text" formControlName="UserName" name="UserName" id="firstName" class="form-control form-control-lg" />
-                      <label class="form-label" for="UserName">Your Name</label>
-                    </div>
-
-                
-
-  
-                  </div>
-                  <div class="col-md-6 mb-4">
-  
-                    <div class="form-outline">
+                      <label class="form-label" for="FirstName">First Name</label>
+                      <!-- <div *ngIf="submitted&&RegistrationFormGroup.controls.FirstName.errors" class="text-danger">
+                        <div *ngIf="submitted&&RegistrationFormGroup.controls.FirstName.errors.required">Enter Your Name</div>
+                      </div> -->
                       
+                      <input
+                        type="text"
+                        formControlName="FirstName"
+                        name=""
+                        required=""
+                        class="form-control form-control-md"
+                      />
+                      
+        
                     </div>
+                  </div>
   
+                  <div class="col-md-6 mb-4 pb-2">
+                    <div class="form-outline">
+                      <label class="form-label" for="LastName">Last Name</label>
+                      <input
+                        type="text"
+                        formControlName="LastName" 
+                        name="LastName"
+                        id="LastName"
+                        class="form-control form-control-md"
+                      />
+                    </div>
                   </div>
                 </div>
   
                 <div class="row">
-                  <div class="col-md-6 mb-4 d-flex align-items-center">
-  
+                  <div class="col-md-6 mb-4 pb-2">
                     <div class="form-outline datepicker w-100">
-                      <input type="date" formControlName="Dob" name="Dob"class="form-control form-control-lg" id="Dob" />
                       <label for="Dob" class="form-label">Date of Birth</label>
+                      <input
+                        type="date"
+                        formControlName="Dob"
+                        name="Dob" 
+                        class="form-control form-control-md"
+                        id="Dob"
+                      />
                     </div>
-  
                   </div>
-                  <div class="col-md-6 mb-4">
   
-                    <h6 class="mb-2 pb-1">Gender: </h6>
-  
-                    <div class="form-check form-check-inline">
-                      <input class type="radio" formControlName="Gender" name="Gender" value="Female" checked />Female
-                    </div>
-  
-                    <div class="form-check form-check-inline">
-                        <input class type="radio" formControlName="Gender" name="Gender" value="Male" checked />Male
-                    </div>  
-                    <div class="form-check form-check-inline">
-                        <input class type="radio" formControlName="Gender" name="Gender" value="Other" checked />Other
-                    </div>
-  
-                  </div>
-                </div>
-  
-                <div class="row">
                   <div class="col-md-6 mb-4 pb-2">
-  
-                    <div class="form-outline">
-                      <input type="email" id="Email" formControlName="Email" name="Email" class="form-control form-control-lg" />
-                      <label class="form-label" for="Email">Email</label>
-                    </div>
-  
-                  </div>
-                  <div class="col-md-6 mb-4 pb-2">
-  
-                    <div class="form-outline">
-                      <input type="tel" id="Phone" formControlName="Phone" name="Phone"class="form-control form-control-lg" />
-                      <label class="form-label" for="Phone">Phone Number</label>
-                    </div>
-  
-                  </div>
-                </div>
-                
-  
-                <div class="row">
-                  <div class="col-12">
-                    Country
-                    <select name="Country" formControlName="Country" class="select form-control-lg">
-                      <option value="1" disabled>Choose option</option>
-                      <option value="INDIA">INDIA</option>
-                      <option value="USA">USA</option>
-                      <option value="CANADA">CANADA</option>
-                    </select>
-                    <label class="form-label select-label">Choose option</label>
-  
-                  </div>
-                </div><br>
-                <div class="row">
-                    <div class="col-md-6 mb-4 d-flex align-items-center">
-    
-                      <div class="form-outline datepicker w-100">
-                        <input type="text" formControlName="Password" name="Password" class="form-control form-control-lg" id="Password" />
-                        <label for="Password" class="form-label">Password</label>
+                    <label class="mb-2 pb-1">Gender:</label>
+                    <br />
+                    <div class="d-flex">
+                      <div class="form-check form-check-inline">
+                        <input
+                          class
+                          type="radio"
+                          formControlName="Gender"
+                          name="Gender"
+                          value="Female"
+                          checked
+                        />Female
                       </div>
-    
+  
+                      <div class="form-check form-check-inline">
+                        <input
+                          class
+                          type="radio"
+                          formControlName="Gender"
+                          name="Gender"
+                          value="Male"
+                          checked
+                        />Male
+                      </div>
+  
+                      <div class="form-check form-check-inline">
+                        <input
+                          class
+                          type="radio"
+                          formControlName="Gender"
+                          name="Gender"
+                          value="Other"
+                          checked
+                        />Other
+                      </div>
                     </div>
-                    </div> 
-                <div class="mt-4 pt-2">                 
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="col-md-6 mb-4 pb-2">
+                    <div class="form-outline">
+                      <label class="form-label" for="Email">Email</label>
+                      <input
+                        type="email"
+                        id="Email"
+                        formControlName="Email"
+                        name="Email" 
+                        class="form-control form-control-md"
+                      />
+                    </div>
+                  </div>
+  
+                  <div class="col-md-6 mb-4 pb-2">
+                    <div class="form-outline">
+                      <label class="form-label" for="Phone">Phone Number</label>
+                      <input
+                        type="tel"
+                        id="Phone"
+                        formControlName="Phone"
+                        name="Phone"
+                        class="form-control form-control-md"
+                      />
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="col-md-6 mb-4 pb-2">
+                    <label for="Country" class="form-label">Country</label><br>
+  
+                    <select name="Country"  formControlName="Country" class="select form-control-lg">
+  
+                       <option>--select your country--</option>
+                      <option *ngFor="let item of Dataarray let i=index"  class="form-control">
+                          {{item.countryname}}</option>   
+                    </select>  
+                </div>
+                  <div class="col-md-6 mb-4 pb-2">
+                    <div class="form-outline datepicker w-100">
+                      <label for="Username" class="form-label">Username</label>
+                      <input
+                        type="text"
+                        formControlName="Username"
+                        name="Username" 
+                        class="form-control form-control-md"
+                        id="Username"
+                      />
+                    </div>
+                  </div>
+                  </div>
+  
+                <div class="row">
+                  <div class="col-md-6 mb-4 pb-2">
+                    <div class="form-outline datepicker w-100">
+                      <label for="Password" class="form-label">Password</label>
+                      <input
+                        type="text"
+                        formControlName="Password"
+                        name="Password" 
+                        class="form-control form-control-md"
+                        id="Password"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4 pb-2">
+                    <div class="form-outline datepicker w-100">
+                      <label for="ConfirmPassword" class="form-label"
+                        >Confirm Password</label
+                      >
+                      <input
+                        type="text"
+                        formControlName="ConfirmPassword"
+                        name="ConfirmPassword"
+                        class="form-control form-control-md"
+                        id="ConfirmPassword"
+                      />
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="register-button mt-4 pt-2">
                   <button type="submit" (click)="onsubmit()">Sign up</button>
-                </div>  
+                </div>
               </form>
             </div>
           </div>

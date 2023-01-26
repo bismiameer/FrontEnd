@@ -7,23 +7,7 @@ import { BackEndServiceService } from 'src/app/back-end-service.service';
   templateUrl: './adminhome.component.html',
   styleUrls: ['./adminhome.component.scss']
 })
-export class AdminhomeComponent implements OnInit{
+export class AdminhomeComponent {
+  imageSrc = 'assets/images/icon.PNG'
 
-  constructor(private fb:FormBuilder,private BackEndService:BackEndServiceService){}
-  FileUploadFormGroup=this.fb.group(
-    {
-      
-      category:[''],
-      videofile:['']
-      
-    }
- )
-  onsubmit()
-  {
-   console.log(this.FileUploadFormGroup.value);
-     this.BackEndService.fileupload(this.FileUploadFormGroup.value)
-  }
-  
-  ngOnInit():void{
-  }
 }

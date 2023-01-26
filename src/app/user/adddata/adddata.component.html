@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-light" style="background-color:#1fa2ff;">
+        <div class="top">
+            <a class="top-link"><a class="w3-bar-item w3-button w3-padding-large" [routerLink]="['/userhome']">Go Back</a></a>
+            <a class="top-link"><a class="w3-bar-item w3-button w3-padding-large" [routerLink]="['/Home']">V-TUBE</a></a>
+            <a class="top-link"><a class="w3-bar-item w3-button w3-padding-large" [routerLink]="['/Login']">Logout</a></a>
+        </div>
+    </nav>
+    <div class="w3-row-padding w3-padding-64 w3-container">
+<div class="head" ><h2>Add Here..</h2></div>
+<div class="box">
+    <form action="" [formGroup]="DescForm">
+        <div class="register-card card shadow-2-strong card-registration">
+        <select class="form-control" formControlName="CategoryName">
+            <option>--select your category--</option>
+            <option *ngFor="let item of Dataarray let i=index"  class="form-control">
+                    {{item.categoryName}}</option>
+         </select>
+         
+        <input type="text" id="description" placeholder="Write tips.." formControlName="description">
+        </div>
+        <div class="register-button mt-2 pt-2">
+            <button type="submit" (click)="onsubmit()">Add</button>
+          </div>
+    </form>
+</div>
+    </div>
+    <header class="w3-center" style="padding:1px 1px">
+        <p><img src="{{ imageSrc }}" /></p>
+      </header>
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+    <p>Copyright@V-TUBE:)</p>
+   </footer>
+</body>
+</html>
+
+
+
+
+
+
+   
+

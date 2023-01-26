@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { BackEndServiceService } from '../back-end-service.service';
 import { HttpClient } from '@angular/common/http';
@@ -10,25 +10,37 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent implements OnInit{
-  constructor(private fb:FormBuilder,private BackEndService:BackEndServiceService){}
+  submitted=false;
+  Dataarray: any[]=[];
+  Country:any[]=[];
+  constructor(private fb:FormBuilder,private BackEndService:BackEndServiceService,private router:Router){}
+  
    RegistrationFormGroup=this.fb.group(
      {
-       UserName:[''],
+       FirstName:[''],
+       LastName:[''],
        Dob:[''],
        Gender:[''],
        Email:[''],
        Phone:[''],
        Country:[''],
-       Password:['']
+       Username:[''],
+       Password:[''],
+       ConfirmPassword:[''],
+       Status:['NotConfirmed']
      }
   )
    onsubmit()
    {
-    console.log(this.RegistrationFormGroup.value);
+    this.submitted=true
+    if(this.RegistrationFormGroup.invalid){
+      return
+    }
+    console.log(this.RegistrationFormGroup.value)
       this.BackEndService.insertregistrationdata(this.RegistrationFormGroup.value)
    }
-   
-   ngOnInit():void{
-   }
-
+   ngOnInit(): void {
+    this.BackEndService.getcountrydata().subscribe((res) => {
+      this.Dataarray=res;});
+  }
 }
